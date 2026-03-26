@@ -1,8 +1,8 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # Global build args (must be re-declared after each FROM when used)
 # ─────────────────────────────────────────────────────────────────────────────
-ARG FOCALBOARD_TAG=v7.1.0
-ARG FOCALBOARD_DOCKER_TAG=7.1.0
+ARG FOCALBOARD_TAG=v7.11.4
+ARG FOCALBOARD_DOCKER_TAG=7.11.4
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Stage 1 – Clone source
