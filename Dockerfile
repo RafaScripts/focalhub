@@ -61,6 +61,13 @@ COPY --from=backend  --chown=nobody:nogroup /focalboard/LICENSE.txt ./LICENSE.tx
 # Copy pre-built frontend pack from official image
 COPY --from=frontend_official --chown=nobody:nogroup /opt/focalboard/pack ./pack
 
+# Copy configuration file
+COPY --chown=nobody:nogroup config.json ./config.json
+
+# Create directories the server writes to at runtime
+RUN mkdir -p ./data/files \
+ && chown -R nobody:nogroup ./data
+
 # Run as non-root
 USER nobody
 
